@@ -167,11 +167,11 @@ def train_model():
         max_seq_length=tokenizer.model_max_length,
     )
 
-    # train_result = trainer.train()
+    train_result = trainer.train()
 
-    # trainer.push_to_hub()
+    trainer.push_to_hub()
 
-    # with open("train_result.pkl", "wb") as f:
-    #     pickle.dump(train_result, f)
+    with open("train_result.pkl", "wb") as f:
+        pickle.dump(train_result, f)
 
     print('Finished')
