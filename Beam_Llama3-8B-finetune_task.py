@@ -151,7 +151,7 @@ def train_model():
                 lora_dropout=0.1,
                 bias="none",
                 task_type="CAUSAL_LM",
-                target_modules=["q_proj", "k_proj", "v_proj", "o_proj"],
+                target_modules=["q_proj", "k_proj", "v_proj", "o_proj"], ## can also add th other layers  ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj",],
         )
 
     trainer = SFTTrainer(
